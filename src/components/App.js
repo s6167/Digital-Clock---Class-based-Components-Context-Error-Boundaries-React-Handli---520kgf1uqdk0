@@ -6,12 +6,10 @@ const App = () => {
 
   useEffect(()=>{
     const id = setInterval(()=>{setDate(new Date().toLocaleString())}, 1000)
-    
-
     return ()=>{
-        clearInterval(id);
+      clearInterval(id);
     }
-  })
+  }, [])
 
   return (
     <div id="main">
